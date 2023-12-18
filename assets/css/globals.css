@@ -1,17 +1,18 @@
-*{
+/* Global Styles */
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-
-:root{
+:root {
     font-size: 16px;
+    font-family: 'Roboto', sans-serif;
     --bg-green: linear-gradient(109.6deg, rgb(217, 250, 158) 11.2%, rgb(128, 251, 174) 91.1%);
 }
 
-
-body{
+body {
     display: grid;
     max-width: 1fr;
     min-height: 100vh;
@@ -23,20 +24,23 @@ body{
     margin: 0 0.05fr;
 }
 
-
-header, footer{
-    background: var(--bg-green) ;
+header,
+footer {
+    background: var(--bg-green);
     display: flex;
     font-weight: bolder;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
 }
 
 main {
     padding: 4rem;
 }
 
-section#board{
+section#board {
     border: 4px solid black;
-    background:rgb(44, 255, 121);
+    background: rgb(44, 255, 121);
     width: 100%;
     max-width: 484px;
     height: 100%;
@@ -48,53 +52,42 @@ section#board{
     margin: auto;
 }
 
-
-
-
-
-#scoreBox {
+#scoreBox,
+#hiscoreBox {
     font-size: 39px;
     font-weight: bold;
-    font-family: "New Tegomin", serif;
-  }
-  
-  #hiscoreBox {
-    font-size: 39px;
-    font-weight: bold;
-    font-family: "New Tegomin", serif;
-  }
-  
-  .head {
+    font-family: "Roboto", sans-serif;
+}
+
+.head {
     background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
     border: 2px solid rgb(34, 4, 34);
     transform: scale(1.02);
     border-radius: 9px;
-  }
-  
-  .snake {
+}
+
+.snake {
     background-color: purple;
     border: 0.25vmin solid white;
     border-radius: 12px;
-  }
-  
-  .food {
+}
+
+.food {
     background: linear-gradient(red, purple);
     border: 0.25vmin solid black;
     border-radius: 18px;
-  }
-  
-  
-
-  @media screen and (max-width: 720px){
-    main{
-        padding: 1rem;
-    }
 }
 
-@media screen and (min-width: 720px){
+/* Responsive Styles */
+
+@media screen and (max-width: 720px) {
+    main {
+        padding: 1rem;
+    }
+
     .food {
         background: linear-gradient(red, purple);
         border: 0.15vmin solid black;
         border-radius: 22px;
-      }
+    }
 }
